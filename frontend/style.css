@@ -115,7 +115,7 @@ select:focus{
 
 /* placeholder */
 input::placeholder{
-    colour:#64748b;
+    color:#64748b;
 }
 
 /* Dropdown option */

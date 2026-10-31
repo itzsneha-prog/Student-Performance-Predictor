@@ -7,7 +7,7 @@ const predictionValue=document.getElementById("predictionValue");
 
 
 //2.FastAPI backend URL
-const API_URL="http://127.0.0.1:8000/predict";
+const API_URL="https://student-performance-api-92wn.onrender.com/predict";
 
 //3.Function to get numerical values
 function getNumber(id){
