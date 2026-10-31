@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Performance Predictor</title>
+</head>
+<body>
+    <main class="page">
+        <header class="hero">
+            <p class="eyebrow">MACHINE LEARNING PROJECT</p>
+            <h1>Student Performance Predeictor</h1>
+            <p>Enter student details to estimate the final grade (G3) out of 20.</p>
+        </header>
+        
+        <form id="predictionForm">
+            <section>
+                <h2>Student Information</h2>
+                <div class="form-grid">
+                    <label>School
+                        <select id="school">
+                            <option value="1">GP</option>
+                            <option value="0">MS</option>
+                        </select>
+                    </label>
+
+                    <label>Sex
+                        <select id="sex">
+                            <option value="1">Female</option>
+                            <option value="0">Male</option>
+                        </select>
+                    </label>
+
+                    <label>Age
+                        <input id="age" type="number" min="15" max="22" value="17" required>
+                    </label>
+
+                    <label>Adress
+                        <select id="address">
+                            <option value="1">Urban</option>
+                            <option value="0">Rural</option>
+                        </select>
+                    </label>
+
+                    <label>Family Size
+                        <select id="famsize">
+                            <option value="1">More than 3(GT3)</option>
+                            <option value="0">3 or fewer</option>
+                        </select>
+                    </label>
+
+                    <label>Parents' Status
+                        <select id="Pstatus">
+                            <option value="1">Together</option>
+                            <option value="0">Apart</option>
+                        </select>
+                    </label>
+                </div>
+            </section>
+
+            <section>
+                <h2>Academic and Family details</h2>
+
+                <div class="form-grid">
+                    <label>Mother's education(0-4)
+                        <input id="Medu" type="number" min="0" max="4" value="2" required>
+                    </label>
+
+                    <label>Father's education(0-4)
+                        <input id="Fedu" type="number" min="0" max="4" value="2" reuqired>
+                    </label>
+
+                    <label>Travel time(1-4)
+                        <input id="traveltime" type="number" min="0" max="4" value="2" required>
+                    </label>
+
+                    <label>Study time(1-4)
+                        <input id="studytime" type="number" min="1" max="4" value="2" required>
+                    </label>
+
+                    <label>Last class failures
+                        <input id="failures" type="number" min="0" max="3" value="0" required>
+                    </label>
+
+                    <label>Family relationship(1-5)
+                        <input id="famrel" type="number" min="1" max="5" value="4" requried>
+                    </label>
+
+                    <label>Free time
+                        <input id="freetime" type="number" min="1" max="5" value="3"required>
+                    </label>
+
+                    <label>Going out(1-5)
+                        <input id="goout" type="number" min="1" max="5" value="3" required>
+                    </label>
+
+                    <label>Workday alcohol consumption
+                        <input id="Dalc" type="number" min="1" max="5" value="1" required>
+                    </label>
+
+                    <label>Weekend alcohol consumption
+                        <input id="Walc" type="number" min="1" max="5" value="1" required>
+                    </label>
+                    <label>Health(1-5)
+                        <input id="health" type="number" min="1" max="5" value="3" required>
+                    </label>
+
+                    <label>Absence
+                        <input id="absences" type="number" min="0" max="5" value="3" required>
+                    </label>
+                </div>
+
+                <div class="form-grid">
+                    <label>School Support
+                        <select id="schoolsup">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </label>
+
+                    <label>Family Support
+                        <select id="famsup">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </label>
+
+                    <label>Paid extra classes
+                        <select id="paid">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </label>
+
+                    <label>Activities
+                        <select id="activities">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </label>
+
+                    <label>Nursery School 
+                        <select id="nursery">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </label>
+
+                    <label>Want higher eduction
+                        <select id="higher">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </label>
+
+                    <label>Internet access
+                        <select id="internet">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </label>
+
+                    <label>Romatic relationship
+                        <select id="romantic">
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                        </select>
+                    </label>
+                </div>
+            </section>
+
+            <section>
+                <h2>Parent and guardian details</h2>
+
+                <div class="form grid">
+                    <label>Mother's job
+                        <select id="Mjob">
+                            <option value="at_home">At home</option>
+                            <option value="health">health</option>
+                            <option value="services">Services</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+
+                    <label>Father's job
+                        <select id="Fjob">
+                            <option value="at_home">At home</option>
+                            <option value="health">health</option>
+                            <option value="services">Services</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+
+                    <label>Reason for choosing school
+                        <select id="reason">
+                            <option value="course">Course</option>
+                            <option value="home">Home</option>
+                            <option value="reputation">Reputation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+
+                    <label>Guardian
+                        <select id="guardian">
+                            <option value="father">Father</option>
+                            <option value="mother">Mother</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+                </div>
+            </section>
+
+            <section>
+                <h2>Previous Grade</h2>
+
+                <div class="form-grid">
+
+                    <label>First period grade(G1)
+                        <input id="G1" type="number" min="0" max="20" value="10" required>
+                        <input id="G2" type="number" min="0" max="20" value="10" required>
+                    </label>
+                </div>
+            </section>
+
+            <p class="note">
+                This is an educational estimate produced by our trained model.
+                It is not a guranteed final result.
+            </p>
+
+            <button id="predictButton" type="submit">
+                Predict final grade
+            </button>
+
+            <p id="errorMessage" class="error" role="alert"></p>
+
+            <div id="resultCard" class="result" aria-live="polite">
+                <span>Predicted final Grade(G3)></span>
+                <strong id="predictionValue">--</strong>
+                <span>out of 20</span>
+            </div>
+        </form>
+
+        <footer>
+           Student Performace prediction·Random Forest Regression
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
